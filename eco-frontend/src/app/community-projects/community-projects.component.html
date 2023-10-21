@@ -1,1 +1,23 @@
-<p>community-projects works!</p>
+<div class="intro column is-8 is-offset-2">
+  <h2 class="title"></h2><br>
+  <p class="subtitle"> Community Projects</p>
+  <div class="sandbox">
+    <div class="tile is-ancestor is-flex-wrap-wrap">
+      <div class="tile is-vertical is-6" *ngFor="let proj of allProjects">
+        <div class="tile">
+          <div class="tile is-parent">
+            <article class="tile is-child notification is-white">
+              <p class="title">{{proj.title}}</p>
+              <p class="subtitle">Description {{proj.description}}</p>
+              <figure class="image is-4by3">
+                <img src="https://picsum.photos/id/17/640/480/" alt="Description">
+              </figure>
+                <p class="subtitl">Start Date: {{proj.start_date | date}}</p>
+                <p class="subtitl">End Date: {{proj.end_date | date}}</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

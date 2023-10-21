@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {DataService} from "../services/data.service";
 
 @Component({
   selector: 'app-community-projects',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CommunityProjectsComponent implements OnInit {
 
-  constructor() { }
+  allProjects: any = {};
+
+  constructor(
+    private dataService: DataService
+  ) {}
 
   ngOnInit(): void {
+    this.getAllProjects();
+  }
+
+  getAllProjects() {
+    this.dataService.getAllProjects().subscribe(data => {
+      this.allProjects = data;
+    })
   }
 
 }

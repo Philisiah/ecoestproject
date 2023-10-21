@@ -1,1 +1,35 @@
-<p>real-time-dashboard works!</p>
+<div class="intro column is-8 is-offset-2">
+  <h2 class="title"></h2><br>
+  <p class="subtitle"> Monitored Forests</p>
+  <div class="sandbox">
+    <div>
+      <div class="tile is-ancestor is-flex-wrap-wrap">
+        <div class="tile is-vertical is-6" *ngFor="let forest of allForests">
+          <div class="tile">
+            <div class="tile is-parent">
+              <article class="tile is-child notification is-white">
+                <p class="title">Name : {{forest.name}} FOREST</p>
+                <p class="subtitle">Category : {{forest.category}}</p>
+                <p class="subtitle">Area : {{forest.area}}</p>
+                <figure class="image is-4by3">
+                  <img src="https://picsum.photos/id/70/640/480/" alt="Description">
+                </figure>
+                <br>
+                <p class="subtitle">Device Name: {{forest.device_name}}</p>
+                <p><span class="icon-text"><span class="icon"><i class="fa fa-thermometer"></i></span><span>Temperature Reading : {{forest.temp_reading}} degrees celcius</span></span>
+                </p>
+                <p><span class="icon-text"><span class="icon"><i
+                  class="fa fa-thermometer"></i></span><span>Humidity Reading : {{forest.humidity_reading}}</span></span>
+                </p>
+                <p><span class="icon-text"><span class="icon"><i class="fa fa-bell"></i></span><span>Fire Alerts {{forest.gas_reading}}</span></span>
+                </p>
+              </article>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -72,100 +72,18 @@
     <p class="subtitle"> See Featured Community Based Projects</p>
   </div>
   <div class="sandbox">
-    <div class="tile is-ancestor">
-      <div class="tile is-vertical">
+    <div class="tile is-ancestor is-flex-wrap-wrap">
+      <div class="tile is-vertical is-6" *ngFor="let proj of featuredProjects">
         <div class="tile">
           <div class="tile is-parent">
             <article class="tile is-child notification is-white">
-              <p class="title">Middle box</p>
-              <p class="subtitle">With an image</p>
+              <p class="title">{{proj.title}}</p>
+              <p class="subtitle">Description {{proj.description}}</p>
               <figure class="image is-4by3">
-                <img src="https://picsum.photos/640/480/?random" alt="Description">
+                <img src="https://picsum.photos/id/17/640/480/" alt="Description">
               </figure>
-            </article>
-          </div>
-          <div class="tile is-parent">
-            <article class="tile is-child notification is-white">
-              <p class="title">Middle box</p>
-              <p class="subtitle">With an image</p>
-              <figure class="image is-4by3">
-                <img src="https://picsum.photos/640/480/?random" alt="Description">
-              </figure>
-            </article>
-          </div>
-          <div class="tile is-parent">
-            <article class="tile is-child notification is-white">
-              <p class="title">Middle box</p>
-              <p class="subtitle">With an image</p>
-              <figure class="image is-4by3">
-                <img src="https://picsum.photos/640/480/?random" alt="Description">
-              </figure>
-            </article>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="tile is-ancestor">
-      <div class="tile is-vertical">
-        <div class="tile">
-          <div class="tile is-parent">
-            <article class="tile is-child notification is-white">
-              <p class="title">Middle box</p>
-              <p class="subtitle">With an image</p>
-              <figure class="image is-4by3">
-                <img src="https://picsum.photos/640/480/?random" alt="Description">
-              </figure>
-            </article>
-          </div>
-          <div class="tile is-parent">
-            <article class="tile is-child notification is-white">
-              <p class="title">Middle box</p>
-              <p class="subtitle">With an image</p>
-              <figure class="image is-4by3">
-                <img src="https://picsum.photos/640/480/?random" alt="Description">
-              </figure>
-            </article>
-          </div>
-          <div class="tile is-parent">
-            <article class="tile is-child notification is-white">
-              <p class="title">Middle box</p>
-              <p class="subtitle">With an image</p>
-              <figure class="image is-4by3">
-                <img src="https://picsum.photos/640/480/?random" alt="Description">
-              </figure>
-            </article>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="tile is-ancestor">
-      <div class="tile is-vertical">
-        <div class="tile">
-          <div class="tile is-parent">
-            <article class="tile is-child notification is-white">
-              <p class="title">Middle box</p>
-              <p class="subtitle">With an image</p>
-              <figure class="image is-4by3">
-                <img src="https://picsum.photos/640/480/?random" alt="Description">
-              </figure>
-            </article>
-          </div>
-          <div class="tile is-parent">
-            <article class="tile is-child notification is-white">
-              <p class="title">Middle box</p>
-              <p class="subtitle">With an image</p>
-              <figure class="image is-4by3">
-                <img src="https://picsum.photos/640/480/?random" alt="Description">
-              </figure>
-            </article>
-          </div>
-          <div class="tile is-parent">
-            <article class="tile is-child notification is-white">
-              <p class="title">Middle box</p>
-              <p class="subtitle">With an image</p>
-              <figure class="image is-4by3">
-                <img src="https://picsum.photos/640/480/?random" alt="Description">
-              </figure>
+                <p class="subtitl">Start Date: {{proj.start_date | date}}</p>
+                <p class="subtitl">End Date: {{proj.end_date | date}}</p>
             </article>
           </div>
         </div>

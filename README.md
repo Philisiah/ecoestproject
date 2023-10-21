@@ -1,10 +1,4 @@
-[![License](https://img.shields.io/badge/License-Apache2-blue.svg)](https://www.apache.org/licenses/LICENSE-2.0) [![Community](https://img.shields.io/badge/Join-Community-blue)](https://developer.ibm.com/callforcode/solutions/projects/get-started/)
-
-_INSTRUCTIONS: This GitHub repository serves as a template you can use to create a new project for the [2023 Call for Code Global Challenge](https://developer.ibm.com/callforcode/global-challenge/). Use the **Use this template** button to create a new version of this repository and start entering content for your own Call for Code submission project. Make sure you have [registered for the 2023 Call for Code Global Challenge](https://developer.ibm.com/callforcode/global-challenge/register/) to access resources and full project submission instructions. Remove any "INSTRUCTIONS" sections when you are ready to submit your project._
-
-_New to Git and GitHub? This free online course will get you up to speed quickly: [Getting Started with Git and GitHub](https://www.coursera.org/learn/getting-started-with-git-and-github)_.
-
-# Replace this heading with your team/submission name
+# Team Ecoest
 
 - [Project summary](#project-summary)
   - [The issue we are hoping to solve](#the-issue-we-are-hoping-to-solve)
@@ -20,58 +14,47 @@ _New to Git and GitHub? This free online course will get you up to speed quickly
 - [Additional details](#additional-details)
   - [How to run the project](#how-to-run-the-project)
   - [Live demo](#live-demo)
-- [About this template](#about-this-template)
-  - [Contributing](#contributing)
-  - [Versioning](#versioning)
-  - [Authors](#authors)
-  - [License](#license)
-  - [Acknowledgments](#acknowledgments)
 
-_INSTRUCTIONS: Complete all required deliverable sections below._
+
 
 ## Project summary
 
 ### The issue we are hoping to solve
 
-REPLACE THIS SENTENCE with a short description, 2-3 sentences in length, of the specific sustainability problem your solution is meant to address.
-
+The Ecoest project is an attempt at employing IOT and AI Technology to boost Forest Bio Diversity Conservation efforts in
+Kenya. 
 ### How our technology solution can help
-
-REPLACE THIS SENTENCE with a short description of your team's solution, in about 10 words.
+Our solution enables:
+- Real-time data collection and analysis to increase visibility and monitoring of forest conditions
+- Helps inform conservation efforts by logging all ongoing reforestation projects.
+- Prevent spread of Wild Fires through early detection
 
 ### Our idea
 
-INSTRUCTIONS: Replace this paragraph with a longer description of your solution. In about 500 words, describe your solution in more detail. Include the real-world problem you identified, describe the technological solution you have created, and explain how it’s an improvement over existing solutions. You can supply additional documentation in this source code repository that you link to as well.
+Our solution is a Web Based iot powered forest monitoring system. It features Automated Forest Monitoring System enabled by custome IOT, A Comprehensive Dashboard with Real Time Data on
+climatic conditions using Node Red and an Automated Fire Monitoring System & Alerts service. 
 
-More detail is available in our [description document](./docs/DESCRIPTION.md).
+[//]: # (More detail is available in our [description document]&#40;./docs/DESCRIPTION.md&#41;.)
 
 ## Technology implementation
 
 ### IBM AI service(s) used
 
-_INSTRUCTIONS: Included here is a list of commonly used IBM AI services. Remove any services you did not use, or add others from the linked catalog not already listed here. Leave only those included in your solution code. Provide details on where and how you used each IBM AI service to help judges review your implementation. Remove these instructions._
-
-- [IBM Natural Language Understanding](https://cloud.ibm.com/catalog/services/natural-language-understanding) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
-- [Watson Assistant](https://cloud.ibm.com/catalog/services/watson-assistant) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
-- [Watson Discovery](https://cloud.ibm.com/catalog/services/watson-discovery) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
-- [Watson Speech to Text](https://cloud.ibm.com/catalog/services/speech-to-text) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
-- [Watson Text to Speech](https://cloud.ibm.com/catalog/services/text-to-speech) - WHERE AND HOW THIS IS USED IN OUR SOLUTION
-- List any additional [IBM AI services](https://cloud.ibm.com/catalog?category=ai#services) used or remove this line
-
-### Other IBM technology used
-
-INSTRUCTIONS: List any other IBM technology used in your solution and describe how each component was used. If you can provide links to/details on exactly where these were used in your code, that would help the judges review your submission.
+- [IBM MQTT](https://cloud.ibm.com/catalog/services/natural-language-understanding) 
+is used in this project to send messages form the device to our node red server. Using the publish/subscribe mechanism we are able to publish sensor readings that can be displayed on the APP
+- [Node-RED](https://nodered.org/) Node-Red is used to create an interactive map displaying all identified forest reserves targetd by this project for monitoring.
 
 ### Solution architecture
 
 Diagram and step-by-step description of the flow of our solution:
 
-![Video transcription/translaftion app](https://developer.ibm.com/developer/tutorials/cfc-starter-kit-speech-to-text-app-example/images/cfc-covid19-remote-education-diagram-2.png)
+![Video transcription/translaftion app](images/Ecoest-Arch-diagram.png)
 
-1. The user navigates to the site and uploads a video file.
-2. Watson Speech to Text processes the audio and extracts the text.
-3. Watson Translation (optionally) can translate the text to the desired language.
-4. The app stores the translated text as a document within Object Storage.
+1. User visits Ecoest App through an Angular App client
+2. The device takes temperature, humidity and gas readings every 20 minutes
+3. MQTT client publishes readings through MQTT Broker to the node-red server. 
+4. Node-red publishes the data onto Ecoest Backend for analysis and Storage.
+5. Backend responds to client request with received data from node-red server
 
 ## Presentation materials
 
@@ -85,56 +68,32 @@ _INSTRUCTIONS: The following deliverables should be officially posted to your My
 
 The project currently does the following things.
 
-- Feature 1
-- Feature 2
-- Feature 3
+- Performs real time monitoring of identified forest reserves using IOT devices 
+- Provides visibility on Community Based Reforestation Projects
+
 
 In the future we plan to...
 
+- Develop a prediction model on deforestation using data sources gathered during the challenge and with the help of open source data by initiatives such as tha JICA REDD+ project.
+
+
 See below for our proposed schedule on next steps after Call for Code 2023 submission.
 
-![Roadmap](./images/roadmap.jpg)
+![Roadmap](./images/Ecoest-roadmap.png)
 
 ## Additional details
 
-_INSTRUCTIONS: The following deliverables are suggested, but **optional**. Additional details like this can help the judges better review your solution. Remove any sections you are not using._
-
 ### How to run the project
-
-INSTRUCTIONS: In this section you add the instructions to run your project on your local machine for development and testing purposes. You can also add instructions on how to deploy the project in production.
-
-### Live demo
-
-You can find a running system to test at...
-
-See our [description document](./docs/DESCRIPTION.md) for log in credentials.
-
----
-
-_INSTRUCTIONS: You can remove the below section from your specific project README._
-
-## About this template
-
-### Contributing
-
-Please read [CONTRIBUTING.md](CONTRIBUTING.md) for details on our code of conduct, and the process for submitting pull requests to us.
-
-### Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
-
-### Authors
-
-<a href="https://github.com/Call-for-Code/Project-Sample/graphs/contributors">
-  <img src="https://contributors-img.web.app/image?repo=Call-for-Code/Project-Sample" />
-</a>
-
-- **Billie Thompson** - _Initial work_ - [PurpleBooth](https://github.com/PurpleBooth)
-
-### License
-
-This project is licensed under the Apache 2 License - see the [LICENSE](LICENSE) file for details.
-
-### Acknowledgments
-
-- Based on [Billie Thompson's README template](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2).
+#### Frontend:
+  * ```cd eco-frontend```
+  * ```npm install```
+  * ```npm run start```
+#### Backend:
+  * ```cd ecoest```
+  * ```python -m venv venv```
+  * ```source venv/bin/activate```
+  * ```pip install -r requirements.txt```
+  * ```python manage.py migrate```
+  * ```python manage.py runserver```
+### Live Demo
+### [Node Red Dashboard](http://40.76.113.55:1880/kenya/) 
