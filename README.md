@@ -98,4 +98,4 @@ See below for our proposed schedule on next steps after Call for Code 2023 submi
   * ```python manage.py migrate```
   * ```python manage.py runserver```
 ### Live Demo
-### [Node Red Dashboard](http://40.76.113.55:1880/kenya/) 
+### [Node Red Dashboard]
